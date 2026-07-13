@@ -90,7 +90,7 @@ export default function Hero() {
           className="mt-9 flex flex-wrap items-center gap-3"
         >
           <Link
-            href="/iletisim"
+            href="/iletisim#randevu"
             className="group inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-brand/30 transition-transform hover:scale-[1.03]"
           >
             Randevu Al

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CalendarCheck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import BookingWidget from "@/components/BookingWidget";
 import { clinicInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -26,7 +27,30 @@ export default function ContactPage() {
         description="Sorularınız ve randevu talepleriniz için formu doldurun ya da doğrudan arayın."
       />
 
-      <section className="section-pad">
+      <section id="randevu" className="section-pad scroll-mt-24">
+        <div className="container-x">
+          <Reveal className="max-w-xl">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-dark">
+              <CalendarCheck size={14} />
+              Online Randevu
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink leading-tight">
+              Uygun saati seç, hemen randevunu al
+            </h2>
+            <p className="mt-3 text-ink-soft leading-relaxed">
+              Telefonla aramaya gerek kalmadan, DoktorTakvimi üzerinden gerçek
+              zamanlı müsait saatlerden dilediğini seçebilirsin. Randevu
+              onayını mesaj olarak alırsın.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1} className="mt-8 overflow-hidden rounded-3xl border border-black/5 bg-paper p-2 card-shadow sm:p-4">
+            <BookingWidget />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section-pad bg-paper-alt">
         <div className="container-x grid gap-10 lg:grid-cols-5">
           <Reveal className="lg:col-span-2 space-y-6">
             <div className="rounded-3xl bg-ink p-7 sm:p-9 text-white">
