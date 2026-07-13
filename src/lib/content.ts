@@ -6,6 +6,11 @@ export const clinicInfo = {
   phoneHref: "tel:+902642794404",
   email: "drmeliscakan@gmail.com",
   mapsQuery: "Dr. Kamil Sk. Süleyman Baş İş Merkezi Adapazarı Sakarya",
+  // TODO: WhatsApp için işletmeye ait mobil numara sağlanınca eklenecek.
+  // Mevcut telefon numarası sabit hat olduğu için WhatsApp'ta kullanılamıyor.
+  whatsappNumber: "",
+  // TODO: Doğrulanmış sosyal medya hesapları eklenene kadar footer'da gösterilmiyor.
+  socials: [] as { label: string; href: string }[],
 };
 
 export const navLinks = [
@@ -13,7 +18,7 @@ export const navLinks = [
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/hizmetler", label: "Hizmetler" },
   { href: "/galeri", label: "Galeri" },
-  { href: "/referanslar", label: "Referanslar" },
+  { href: "/referanslar", label: "Hasta Deneyimleri" },
   { href: "/sss", label: "S.S.S" },
   { href: "/iletisim", label: "İletişim" },
 ];
@@ -48,7 +53,7 @@ export const services: Service[] = [
     title: "Diş İmplantı",
     short: "Titanyum implantlarla eksik dişlerinize ömür boyu kalıcı bir çözüm.",
     description:
-      "İmplant, çene kemiğine yerleştirilen ve protezlere destek için yapılan yapay diş kökleridir. Eksik dişlerin yerine uygulanan, uzun ömürlü ve yaşam boyu sorunsuz şekilde kullanılabilen, çoğunlukla titanyumdan yapılan vidalardır.",
+      "İmplant, çene kemiğine yerleştirilen ve protezlere destek için yapılan yapay diş kökleridir. Eksik dişlerin yerine uygulanan, doğru bakım ve düzenli kontrollerle uzun yıllar kullanılabilecek şekilde tasarlanan, çoğunlukla titanyumdan yapılan vidalardır.",
     icon: "tooth",
   },
   {
@@ -116,7 +121,7 @@ export const faqs = [
   },
   {
     q: "Beyazlatma dişlerime zarar verir mi?",
-    a: "Diş hekimi kontrolünde yapılan beyazlatmanın dişlere hiçbir zararı yoktur. Aksi takdirde bu uygulamayı hem kendimize hem sevdiklerimize yapmazdık.",
+    a: "Diş hekimi kontrolünde ve doğru protokolle uygulanan beyazlatma işleminin dişlere zarar vermesi beklenmez. Bununla birlikte her hastanın diş yapısı farklıdır; kendinize uygun olup olmadığını muayene sırasında birlikte değerlendiriyoruz.",
   },
   {
     q: "Ultrasonik temizleyiciler dişe zarar verir mi?",
@@ -136,7 +141,7 @@ export const faqs = [
   },
   {
     q: "Kanal tedavisi ağrılı bir işlem midir?",
-    a: "Kök kanal tedavisi sırasında anestezi yapılacağı için hasta herhangi bir ağrı hissetmez.",
+    a: "Kök kanal tedavisi öncesinde bölgeye anestezi uygulanır, bu sayede işlem sırasında ağrı hissi büyük ölçüde önlenir. İşlem sonrasında birkaç gün süren hafif bir hassasiyet olağandır.",
   },
   {
     q: "Diş enfeksiyonlarında antibiyotik kullanımı gerekli midir?",
@@ -163,12 +168,6 @@ export const testimonials = [
   },
   {
     quote:
-      "Melis Hanım ile 2006'da tanıştım ve diş sağlığım açısından hayatımda yaptığım en iyi şeyin bu olduğunu söyleyebilirim. Kendisi sadece sağlık değil, estetik açısından da durumunuzu değerlendirip ona göre tedavi öneriyor. Sonuçtan çok memnunum, tüm yakınlarıma öneriyorum.",
-    name: "Eric Doe",
-    role: "Web Yazılımcısı",
-  },
-  {
-    quote:
       "Dişlerimin çarpıklığı çok fazlaydı ve düzeltilmesi zor gibi duruyordu ama sağlıktan estetiğe kadar her şeyi ince ayrıntısına kadar düşünen Melis Hanım sayesinde harika bir gülüşe sahip oldum. Kendini güvenilir bir diş hekimine emanet etmek isteyen herkese tavsiye ediyorum.",
     name: "Nazlı Bağcan",
     role: "Grafiker",
@@ -186,12 +185,54 @@ export const aboutContent = {
     name: "Dr. Melis Çakan",
     title: "Diş Hekimi",
     bio: "İstanbul doğumludur. 1998 yılında İstanbul Üniversitesi Çapa Diş Hekimliği Fakültesi'nden mezun olmuştur. Mezuniyetini takip eden 2 yıl Çapa Diş Hekimliği Fakültesi Endodonti Anabilim Dalı'nda doktora derslerine katılmıştır. 2011-2012 yıllarında ortodontik hareketler ve fonksiyonel çene ortopedisi konulu eğitim kurslarını, 2013 yılında implant uygulamaları ve ileri cerrahi seminerlerini tamamlamıştır. 2014 yılında botoks ve dermal uygulamalar (kozmetik diş hekimliği) eğitimlerini tamamlayarak hizmet alanını genişletmiştir.",
+    education: [
+      "İstanbul Üniversitesi Diş Hekimliği Fakültesi (1998)",
+      "İÜ Çapa Diş Hekimliği Fakültesi, Endodonti Anabilim Dalı — doktora dersleri",
+    ],
+    experience: "2003 yılından bu yana Sakarya'da mesleğini icra etmektedir.",
+    languages: ["Türkçe", "İngilizce"],
+    // TODO: Mesleki üyelik ve sertifika bilgileri doğrulanınca eklenecek.
   },
 };
 
+export const timeline = [
+  {
+    year: "2003",
+    title: "Muayenehanenin kuruluşu",
+    description: "Dr. Melis Çakan, Sakarya'da kendi muayenehanesini açtı.",
+  },
+  {
+    year: "2011",
+    title: "Klinik altyapısının genişlemesi",
+    description:
+      "Aynı bina içinde yapılan değişikliklerle klinik altyapısı kuruldu, üç hasta koltuğuyla hizmet kapasitesi artırıldı.",
+  },
+  {
+    year: "Günümüz",
+    title: "Modern ve kapsamlı klinik hizmetleri",
+    description:
+      "Kozmetik diş hekimliğinden implant ve kanal tedavisine geniş bir tedavi yelpazesiyle hizmet vermeye devam ediyoruz.",
+  },
+];
+
+export const clinicValues = [
+  {
+    title: "Kişiye özel yaklaşım",
+    description: "Her hastanın ihtiyacına göre şekillenen, birlikte karar verilen tedavi planları.",
+  },
+  {
+    title: "Doğal sonuçlara odaklanma",
+    description: "Estetik çalışmalarda abartıdan uzak, yüz hatlarınızla uyumlu sonuçlar hedefleniyor.",
+  },
+  {
+    title: "Uzun vadeli ağız sağlığı",
+    description: "Tek seferlik işlemden çok, düzenli kontrol ve koruyucu yaklaşımla kalıcı sonuç.",
+  },
+];
+
+// Yalnızca doğrulanmış, gerçek verilere dayanan istatistikler.
 export const stats = [
   { label: "Yıllık Deneyim", value: "20+" },
-  { label: "Mutlu Hasta", value: "5.000+" },
   { label: "Tedavi Alanı", value: "10+" },
   { label: "Hasta Koltuğu", value: "3" },
 ];
