@@ -28,9 +28,7 @@ export default function MobileStickyBar() {
             Randevu Al
           </Link>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              clinicInfo.mapsQuery
-            )}`}
+            href={`https://www.google.com/maps/dir/?api=1&destination=${clinicInfo.coords.lat},${clinicInfo.coords.lng}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-medium text-foreground-muted transition-colors hover:text-accent-hover active:scale-95"

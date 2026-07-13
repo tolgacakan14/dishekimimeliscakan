@@ -6,6 +6,10 @@ export const clinicInfo = {
   phoneHref: "tel:+902642794404",
   email: "drmeliscakan@gmail.com",
   mapsQuery: "Dr. Kamil Sk. Süleyman Baş İş Merkezi Adapazarı Sakarya",
+  // Google Maps'teki doğrulanmış işletme konumu (Melis Çakan Diş Kliniği).
+  coords: { lat: 40.7793132, lng: 30.398945 },
+  mapsPlaceUrl:
+    "https://www.google.com/maps/place/Melis+%C3%87akan+Di%C5%9F+Klini%C4%9Fi/@40.7793132,30.398945,17z/data=!3m1!4b1!4m6!3m5!1s0x409df629cc7a5515:0x739ca5a8bf327394!8m2!3d40.7793132!4d30.398945!16s%2Fg%2F11gb4030ng",
   // TODO: WhatsApp için işletmeye ait mobil numara sağlanınca eklenecek.
   // Mevcut telefon numarası sabit hat olduğu için WhatsApp'ta kullanılamıyor.
   whatsappNumber: "",

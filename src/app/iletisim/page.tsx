@@ -87,9 +87,7 @@ export default function ContactPage() {
                 ))}
               </ul>
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  clinicInfo.mapsQuery
-                )}`}
+                href={`https://www.google.com/maps/dir/?api=1&destination=${clinicInfo.coords.lat},${clinicInfo.coords.lng}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-white/10"
@@ -101,15 +99,13 @@ export default function ContactPage() {
 
             <div className="overflow-hidden rounded-[var(--radius-large)] card-shadow h-64">
               <iframe
-                title="Klinik Konumu"
+                title="Klinik Konumu — Melis Çakan Diş Kliniği"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(
-                  clinicInfo.mapsQuery
-                )}&output=embed`}
+                src={`https://www.google.com/maps?q=${clinicInfo.coords.lat},${clinicInfo.coords.lng}&z=17&output=embed`}
               />
             </div>
           </Reveal>

@@ -17,6 +17,12 @@ export const clinicSchema = {
     addressLocality: "Adapazarı / Sakarya",
     addressCountry: "TR",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: clinicInfo.coords.lat,
+    longitude: clinicInfo.coords.lng,
+  },
+  hasMap: clinicInfo.mapsPlaceUrl,
   openingHours: "Mo-Sa 09:00-19:00",
   founder: {
     "@type": "Person",
