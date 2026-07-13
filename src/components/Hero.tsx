@@ -77,7 +77,7 @@ export default function Hero() {
         >
           Sağlıklı bir gülüş,
           <br />
-          <span className="text-gradient bg-gradient-to-r from-[#e8d3a8] via-[#f1e6d2] to-[#c6a15b] bg-clip-text text-transparent">
+          <span className="text-gradient bg-gradient-to-r from-[#99f6e4] via-[#5eead4] to-[#2dd4bf] bg-clip-text text-transparent">
             kendinizi iyi hissetmekle
           </span>{" "}
           başlar.

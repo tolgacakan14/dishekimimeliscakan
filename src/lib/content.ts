@@ -33,6 +33,8 @@ export type Service = {
   short: string;
   description: string;
   icon: string;
+  image: string;
+  imageAlt: string;
 };
 
 export const services: Service[] = [
@@ -43,6 +45,8 @@ export const services: Service[] = [
     description:
       "Dolgu, çürük nedeniyle zarar görmüş bir dişe normal fonksiyonunu ve görünümünü kazandırmanın bir yöntemidir. Dolgu yaparken önce çürümüş diş dokusu uzaklaştırılır, etkilenen alan temizlenir ve boşluk dolgu malzemesi ile doldurulur. Amalgam, kompozit ve cam iyomer dolgu çeşitleri arasındadır.",
     icon: "syringe",
+    image: "https://images.unsplash.com/photo-1739902526173-06750b78cfb7?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Diş hekiminde muayene ve dolgu kontrolü",
   },
   {
     slug: "kozmetik-dis-hekimligi",
@@ -51,7 +55,9 @@ export const services: Service[] = [
     description:
       "Kozmetik diş hekimliğinde yapılan dişlerin muntazam ve güzel olmasının yanında, kişiye özgü; hastanın yüzüne, ten rengine ve göz rengine en uygun, doğal dişten ayrılmayan ama son derece çekici, ışıl ışıl, ince ve şeffaf, son teknoloji materyallerden üretilen dişler uygulanır.",
     icon: "sparkles",
-  },
+    image: "https://images.unsplash.com/photo-1769559893692-c6d0623bf8e4?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Estetik ve sağlıklı bir gülüş",
+    },
   {
     slug: "dis-implanti",
     title: "Diş İmplantı",
@@ -59,6 +65,8 @@ export const services: Service[] = [
     description:
       "İmplant, çene kemiğine yerleştirilen ve protezlere destek için yapılan yapay diş kökleridir. Eksik dişlerin yerine uygulanan, doğru bakım ve düzenli kontrollerle uzun yıllar kullanılabilecek şekilde tasarlanan, çoğunlukla titanyumdan yapılan vidalardır.",
     icon: "tooth",
+    image: "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Diş implantı modeli",
   },
   {
     slug: "agiz-cerrahisi",
@@ -67,6 +75,8 @@ export const services: Service[] = [
     description:
       "Ağız, çene ve yüz bölgelerindeki yumuşak ve sert dokuların konjenital ve kazanılmış hastalıkları ile enfeksiyöz, travmatik ve her türlü patolojik nedenlerin yol açtığı estetik, fonksiyonel ve fonetik sorunların medikal ve cerrahi tedavisini gerçekleştiriyoruz.",
     icon: "activity",
+    image: "https://images.unsplash.com/photo-1551601651-09492b5468b6?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Ameliyathanede cerrahi operasyon",
   },
   {
     slug: "kanal-tedavisi",
@@ -75,6 +85,8 @@ export const services: Service[] = [
     description:
       "Kanal tedavisi, oldukça fazla hasar görmüş ya da iltihaplanmış bir dişi onarmak ve kurtarmak için yapılan bir tedavidir. Tedavi; dişin hasar görmüş bölümünün çıkarılması, temizlenmesi, dezenfekte edilmesi ve tekrar doldurularak kapatılmasını içerir.",
     icon: "heart-pulse",
+    image: "https://images.unsplash.com/photo-1643660527190-4f401370f788?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Modern tedavi ünitesi",
   },
   {
     slug: "periodontoloji-tedavisi",
@@ -83,6 +95,8 @@ export const services: Service[] = [
     description:
       "Periodontal hastalıklar, diş eti ve dişleri destekleyen dokuları etkileyen iltihabi hastalıklardır. Erişkinlerde diş kayıplarının %70'inden periodontal hastalıklar sorumludur. Bu hastalıklar erken dönemde teşhis edildiklerinde kolay ve başarılı şekilde tedavi edilebilir.",
     icon: "shield-plus",
+    image: "https://images.unsplash.com/photo-1758205308179-4e00e0e4060b?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Diş hekiminin araçlarla muayenesi",
   },
   {
     slug: "dis-teli-uygulamasi",
@@ -91,6 +105,8 @@ export const services: Service[] = [
     description:
       "Dişler arasındaki boşlukları gidermek, birbirini iten dişleri düzeltmek, kırık dişleri onarmak, ısırma bozukluklarını gidermek ve üst üste binen dişleri düzenlemek için diş teli uygulamaları planlıyoruz.",
     icon: "align-center",
+    image: "https://images.unsplash.com/photo-1598256989809-394fa4f6cd26?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Diş teli (ortodontik apareyi) uygulaması",
   },
   {
     slug: "bleaching-dis-beyazlatma",
@@ -99,6 +115,8 @@ export const services: Service[] = [
     description:
       "Bleaching yöntemi ile diş beyazlatma, klinik ortamında diş hekimi tarafından uygulanan bir diş beyazlatma yöntemidir. Günümüzde gelişen teknolojilerle birlikte başarı oranı yükselen ve güvenilir bir diş beyazlatma yöntemi olarak öne çıkmaktadır.",
     icon: "sun",
+    image: "https://images.unsplash.com/photo-1758206524132-72a2aa6639e2?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Klinik ortamında diş tedavisi uygulaması",
   },
   {
     slug: "zirkonyum-dis-kaplamasi",
@@ -107,6 +125,8 @@ export const services: Service[] = [
     description:
       "Zirkonyum diş, klasik porselen köprü ve protezlerin alt yapısı olan gri metalin yerine kullanılan beyaz bir alaşımdır. Işık geçirgenliği özelliği sayesinde doğal dişlerin görüntüsü tam olarak yakalanır.",
     icon: "gem",
+    image: "https://images.unsplash.com/photo-1771442873035-474765b40ac6?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Diş kaplaması ve kron örneği",
   },
   {
     slug: "porselen-dis-tedavisi",
@@ -115,6 +135,8 @@ export const services: Service[] = [
     description:
       "Porselen diş uygulaması; sağlıklı olmayan veya estetik görünüme sahip olmayan, temel görevini yerine getiremeyen dişlerin porselenle kaplanarak yenilenmesidir. Uygulama, porselen yaprak (laminate) ve tam kaplama olmak üzere iki şekilde yapılabilir.",
     icon: "crown",
+    image: "https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Modern diş kliniğinde hasta görüşmesi",
   },
 ];
 

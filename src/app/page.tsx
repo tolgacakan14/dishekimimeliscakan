@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, Clock, Navigation } from "lucide-react";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import ServicesBento from "@/components/ServicesBento";
@@ -8,7 +8,7 @@ import GuideFinder from "@/components/GuideFinder";
 import TestimonialCard from "@/components/TestimonialCard";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/Reveal";
-import { services, testimonials, aboutContent } from "@/lib/content";
+import { services, testimonials, aboutContent, clinicInfo } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -113,6 +113,54 @@ export default function Home() {
               <TestimonialCard key={t.name} {...t} index={i} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container-x grid gap-10 lg:grid-cols-5 items-center">
+          <Reveal className="lg:col-span-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-hover">
+              Bizi Ziyaret Edin
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-semibold text-foreground leading-tight">
+              Sakarya Adapazarı&apos;nda kolay ulaşılabilir bir konumdayız
+            </h2>
+            <ul className="mt-6 space-y-4 text-foreground-muted">
+              <li className="flex gap-3">
+                <MapPin size={19} className="mt-0.5 shrink-0 text-accent-hover" aria-hidden />
+                <span className="text-sm leading-relaxed">{clinicInfo.address}</span>
+              </li>
+              <li className="flex gap-3">
+                <Clock size={19} className="mt-0.5 shrink-0 text-accent-hover" aria-hidden />
+                <span className="text-sm leading-relaxed">
+                  Pazartesi - Cumartesi: 09:00 - 19:00
+                </span>
+              </li>
+            </ul>
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${clinicInfo.coords.lat},${clinicInfo.coords.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
+            >
+              <Navigation size={16} aria-hidden />
+              Yol Tarifi Al
+            </a>
+          </Reveal>
+
+          <Reveal delay={0.1} className="lg:col-span-3">
+            <div className="overflow-hidden rounded-[var(--radius-large)] card-shadow h-72 sm:h-96">
+              <iframe
+                title="Klinik Konumu — Melis Çakan Diş Kliniği"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src={`https://www.google.com/maps?q=${clinicInfo.coords.lat},${clinicInfo.coords.lng}&z=17&output=embed`}
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

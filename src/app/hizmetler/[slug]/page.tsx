@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft } from "lucide-react";
@@ -88,8 +89,19 @@ export default async function ServiceDetailPage({
               </ol>
             </nav>
 
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-tint text-accent-hover">
-              <ServiceIcon name={service.icon} size={26} />
+            <div className="relative h-56 w-full overflow-hidden rounded-[var(--radius-large)] card-shadow sm:h-72">
+              <Image
+                src={service.image}
+                alt={service.imageAlt}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 800px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
+              <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm">
+                <ServiceIcon name={service.icon} size={24} />
+              </div>
             </div>
             <h2 className="mt-6 text-2xl font-display font-semibold text-foreground">
               Tedavi hakkında

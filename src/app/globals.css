@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Premium warm palette */
-  --background: #faf7f2;
+  /* Sağlık temelli, beyaz-turkuaz palet */
+  --background: #f6fbfb;
   --surface: #ffffff;
-  --surface-muted: #f2ece0;
-  --foreground: #211f1c;
-  --foreground-muted: #6b6459;
-  --accent: #a9834c;
-  --accent-hover: #7c5f35;
-  --accent-tint: #f1e6d2;
-  --mist: #e6edea;
-  --border: #e7e0d3;
+  --surface-muted: #eaf6f5;
+  --foreground: #16302c;
+  --foreground-muted: #5c706d;
+  --accent: #0d9488;
+  --accent-hover: #0b7a70;
+  --accent-tint: #d6f3ef;
+  --mist: #e6f6f4;
+  --border: #dcebe9;
 
-  --shadow-soft: 0 1px 2px rgba(33, 31, 28, 0.05), 0 6px 20px -10px rgba(33, 31, 28, 0.12);
-  --shadow-card: 0 24px 60px -28px rgba(33, 31, 28, 0.28);
+  --shadow-soft: 0 1px 2px rgba(15, 40, 37, 0.05), 0 6px 20px -10px rgba(15, 40, 37, 0.12);
+  --shadow-card: 0 24px 60px -28px rgba(15, 40, 37, 0.25);
 
   --radius-small: 0.75rem;
   --radius-medium: 1.25rem;
@@ -31,7 +31,7 @@
   --ink-soft: var(--foreground-muted);
   --paper: var(--surface);
   --paper-alt: var(--surface-muted);
-  --gold: #c6a15b;
+  --gold: #2dd4bf;
 
   --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
