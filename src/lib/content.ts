@@ -210,6 +210,7 @@ export const aboutContent = {
   doctor: {
     name: "Dr. Melis Çakan",
     title: "Diş Hekimi",
+    photo: "/images/team/melis-cakan.jpg",
     bio: "İstanbul doğumludur. 1998 yılında İstanbul Üniversitesi Çapa Diş Hekimliği Fakültesi'nden mezun olmuştur. Mezuniyetini takip eden 2 yıl Çapa Diş Hekimliği Fakültesi Endodonti Anabilim Dalı'nda doktora derslerine katılmıştır. 2011-2012 yıllarında ortodontik hareketler ve fonksiyonel çene ortopedisi konulu eğitim kurslarını, 2013 yılında implant uygulamaları ve ileri cerrahi seminerlerini tamamlamıştır. 2014 yılında botoks ve dermal uygulamalar (kozmetik diş hekimliği) eğitimlerini tamamlayarak hizmet alanını genişletmiştir.",
     education: [
       "İstanbul Üniversitesi Diş Hekimliği Fakültesi (1998)",
@@ -219,6 +220,27 @@ export const aboutContent = {
     languages: ["Türkçe", "İngilizce"],
     // TODO: Mesleki üyelik ve sertifika bilgileri doğrulanınca eklenecek.
   },
+};
+
+// İkinci diş hekimimiz. Eğitim/sertifika bilgileri doğrulanınca genişletilecek.
+export const secondDoctor = {
+  name: "Melisa Turgut",
+  title: "Diş Hekimi",
+  photo: "/images/team/melisa-turgut.jpg",
+  bio: "Kliniğimizde hastalarımıza özenli ve modern bir yaklaşımla hizmet vermektedir.",
+  // TODO: Eğitim, deneyim ve sertifika bilgileri doğrulanınca eklenecek.
+};
+
+// Klinik ekibi görselleri: asistanlarımız ve tüm kadromuzun yer aldığı fotoğraflar.
+export const teamPhotos = {
+  assistants: [
+    { src: "/images/team/asistan-1.jpg", alt: "Klinik asistanımız" },
+    { src: "/images/team/asistan-2.jpg", alt: "Klinik asistanımız" },
+  ],
+  group: [
+    { src: "/images/team/ekip-1.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
+    { src: "/images/team/ekip-2.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
+  ],
 };
 
 export const timeline = [

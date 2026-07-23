@@ -7,7 +7,7 @@ export const clinicSchema = {
   "@context": "https://schema.org",
   "@type": "Dentist",
   name: clinicInfo.name,
-  image: `${siteUrl}/images/team/melis1.jpg`,
+  image: `${siteUrl}/images/team/melis-cakan.jpg`,
   url: siteUrl,
   telephone: "+902642794404",
   email: clinicInfo.email,

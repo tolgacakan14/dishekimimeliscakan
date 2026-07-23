@@ -6,22 +6,16 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import CtaBanner from "@/components/CtaBanner";
 import Timeline from "@/components/Timeline";
-import { aboutContent, clinicValues } from "@/lib/content";
+import { aboutContent, clinicValues, secondDoctor, teamPhotos } from "@/lib/content";
 import { breadcrumbSchema, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "2003 yılından bu yana Sakarya'da hizmet veren Melis Çakan Diş Kliniği'nin hikayesi, klinik yaklaşımı ve Dr. Melis Çakan'ın özgeçmişi.",
+    "2003 yılından bu yana Sakarya'da hizmet veren Melis Çakan Diş Kliniği'nin hikayesi, klinik yaklaşımı ve ekibimiz.",
   alternates: { canonical: "/hakkimizda" },
   openGraph: { url: `${siteUrl}/hakkimizda`, title: "Hakkımızda | Melis Çakan Diş Kliniği" },
 };
-
-const teamPhotos = [
-  { src: "/images/team/IMG_2217.jpg", alt: "Klinik tedavi ünitesi iç mekan görünümü" },
-  { src: "/images/team/IMG_2266.jpg", alt: "Klinik bekleme ve tedavi alanı" },
-  { src: "/images/team/hakki2.JPG", alt: "Klinik ekibinden bir görüntü" },
-];
 
 export default function AboutPage() {
   const crumbs = breadcrumbSchema([
@@ -38,7 +32,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Hakkımızda"
         title="2003'ten bu yana Sakarya'da"
-        description="Klinik hikayemiz, yaklaşımımız ve Dr. Melis Çakan'ın özgeçmişi."
+        description="Klinik hikayemiz, yaklaşımımız ve ekibimiz."
       />
 
       <section className="section-pad">
@@ -46,8 +40,8 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[var(--radius-large)] card-shadow mx-auto lg:mx-0">
               <Image
-                src="/images/team/melis1.jpg"
-                alt="Dr. Melis Çakan"
+                src={aboutContent.doctor.photo}
+                alt={aboutContent.doctor.name}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 480px"
@@ -89,6 +83,33 @@ export default function AboutPage() {
       </section>
 
       <section className="section-pad bg-surface-muted">
+        <div className="container-x grid gap-12 lg:grid-cols-2 items-start">
+          <Reveal delay={0.1} className="order-2 lg:order-1">
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-hover">
+              Ekibimiz
+            </span>
+            <h2 className="mt-3 text-3xl font-display font-semibold text-foreground leading-tight">
+              {secondDoctor.name}
+            </h2>
+            <p className="mt-1 text-sm font-medium text-accent-hover">{secondDoctor.title}</p>
+            <p className="mt-5 text-foreground-muted leading-relaxed">{secondDoctor.bio}</p>
+          </Reveal>
+
+          <Reveal className="order-1 lg:order-2">
+            <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[var(--radius-large)] card-shadow mx-auto lg:mx-0">
+              <Image
+                src={secondDoctor.photo}
+                alt={secondDoctor.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 480px"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section-pad">
         <div className="container-x grid gap-12 lg:grid-cols-2">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-hover">
@@ -115,7 +136,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="section-pad bg-surface-muted">
         <div className="container-x">
           <Reveal className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-hover">
@@ -152,18 +173,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-pad bg-surface-muted">
+      <section className="section-pad">
         <div className="container-x">
           <Reveal className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-hover">
-              Kliniğimiz
+              Ekibimiz
             </span>
             <h2 className="mt-3 text-3xl font-display font-semibold text-foreground leading-tight">
-              Modern altyapı, güven veren ortam
+              Kliniğimizle ve ekibimizle tanışın
             </h2>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            {teamPhotos.map((p, i) => (
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[...teamPhotos.assistants, ...teamPhotos.group].map((p, i) => (
               <Reveal key={p.src} delay={i * 0.08}>
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-large)] card-shadow">
                   <Image
@@ -171,7 +192,7 @@ export default function AboutPage() {
                     alt={p.alt}
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
               </Reveal>

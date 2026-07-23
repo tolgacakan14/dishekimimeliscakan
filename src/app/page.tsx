@@ -27,8 +27,8 @@ export default function Home() {
             <div className="relative">
               <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[var(--radius-large)] card-shadow">
                 <Image
-                  src="/images/team/IMG_2217.jpg"
-                  alt="Melis Çakan Diş Kliniği tedavi ünitesi"
+                  src="/images/team/melis-cakan.jpg"
+                  alt="Dr. Melis Çakan"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 480px"

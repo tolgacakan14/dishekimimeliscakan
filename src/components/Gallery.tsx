@@ -7,18 +7,12 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const images = [
-  { src: "/images/gallery/gal-1.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-2.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-3.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-4.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-5.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-6.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-7.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-8.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/gallery/gal-9.jpg", alt: "Klinikten tedavi sonrası çalışma örneği" },
-  { src: "/images/team/IMG_2217.jpg", alt: "Klinik tedavi ünitesi iç mekan görünümü" },
-  { src: "/images/team/IMG_2266.jpg", alt: "Klinik bekleme ve tedavi alanı" },
-  { src: "/images/team/hakki2.JPG", alt: "Klinik ekibinden bir görüntü" },
+  { src: "/images/team/ekip-1.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
+  { src: "/images/team/melis-cakan.jpg", alt: "Dr. Melis Çakan" },
+  { src: "/images/team/melisa-turgut.jpg", alt: "Melisa Turgut, Diş Hekimi" },
+  { src: "/images/team/asistan-1.jpg", alt: "Klinik asistanımız" },
+  { src: "/images/team/asistan-2.jpg", alt: "Klinik asistanımız" },
+  { src: "/images/team/ekip-2.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
 ];
 
 export default function Gallery() {

@@ -6,7 +6,7 @@ import { breadcrumbSchema, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Galeri",
-  description: "Melis Çakan Diş Kliniği'nden ve tedavi ortamımızdan görüntüler.",
+  description: "Melis Çakan Diş Kliniği'nden ve uzman ekibimizden görüntüler.",
   alternates: { canonical: "/galeri" },
   openGraph: { url: `${siteUrl}/galeri`, title: "Galeri | Melis Çakan Diş Kliniği" },
 };
@@ -26,7 +26,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Galeri"
         title="Kliniğimizden kareler"
-        description="Modern tedavi ünitelerimiz ve çalışma ortamımızdan görüntüler."
+        description="Uzman ekibimiz ve klinik ortamımızdan görüntüler."
       />
       <section className="section-pad">
         <div className="container-x">

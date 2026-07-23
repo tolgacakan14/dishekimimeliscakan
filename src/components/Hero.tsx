@@ -8,10 +8,10 @@ import { ArrowRight, Phone, CalendarCheck, UserRound, Sparkles, MapPin } from "l
 import { clinicInfo } from "@/lib/content";
 
 const slides = [
-  { src: "/images/home/slider1.jpg", alt: "Melis Çakan Diş Kliniği tedavi ünitesi" },
-  { src: "/images/home/slider2.jpg", alt: "Kozmetik diş hekimliği uygulaması" },
-  { src: "/images/home/slider4.jpg", alt: "Klinik iç mekan görünümü" },
-  { src: "/images/home/slider3.jpg", alt: "Modern diş kliniği, Sakarya" },
+  { src: "/images/team/ekip-1.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
+  { src: "/images/team/melis-cakan.jpg", alt: "Dr. Melis Çakan" },
+  { src: "/images/team/ekip-2.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
+  { src: "/images/team/melisa-turgut.jpg", alt: "Melisa Turgut, Diş Hekimi" },
 ];
 
 const trustItems = [
