@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { clinicInfo, navLinks, services } from "@/lib/content";
 
 const legalLinks = [
@@ -77,6 +77,17 @@ export default function Footer() {
               <Mail size={17} className="shrink-0 text-accent-tint mt-0.5" aria-hidden />
               <a href={`mailto:${clinicInfo.email}`} className="hover:text-accent-tint transition-colors">
                 {clinicInfo.email}
+              </a>
+            </li>
+            <li className="flex gap-2.5">
+              <MessageCircle size={17} className="shrink-0 text-accent-tint mt-0.5" aria-hidden />
+              <a
+                href={clinicInfo.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent-tint transition-colors"
+              >
+                WhatsApp&apos;tan yazın
               </a>
             </li>
             <li className="flex gap-2.5">

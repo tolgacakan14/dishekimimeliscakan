@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock, CalendarCheck, Navigation } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CalendarCheck, Navigation, MessageCircle } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
@@ -17,6 +17,12 @@ export const metadata: Metadata = {
 const infoItems = [
   { icon: MapPin, label: "Adres", value: clinicInfo.address },
   { icon: Phone, label: "Telefon", value: clinicInfo.phone, href: clinicInfo.phoneHref },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "0545 279 44 04",
+    href: clinicInfo.whatsappHref,
+  },
   { icon: Mail, label: "E-posta", value: clinicInfo.email, href: `mailto:${clinicInfo.email}` },
   { icon: Clock, label: "Çalışma Saatleri", value: "Pazartesi - Cumartesi: 09:00 - 19:00" },
 ];

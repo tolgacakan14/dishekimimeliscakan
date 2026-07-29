@@ -13,7 +13,7 @@ export const clinicSchema = {
   email: clinicInfo.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Dr. Kamil Sk. Süleyman Baş İş Merkezi K:1",
+    streetAddress: "Cumhuriyet Mahallesi Dr. Nuri Bayar Cad. Süleyman Baş İş Merkezi K:1",
     addressLocality: "Adapazarı / Sakarya",
     addressCountry: "TR",
   },
