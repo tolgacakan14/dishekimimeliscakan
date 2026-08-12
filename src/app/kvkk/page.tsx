@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 const sections = [
   {
     heading: "Veri Sorumlusu",
-    body: `${clinicInfo.name}, iletişim formu ve randevu talepleri kapsamında paylaştığınız ad, telefon, e-posta ve mesaj içeriği gibi kişisel verileri, yalnızca talebinizi yanıtlamak amacıyla işler.`,
+    body: `${clinicInfo.name}, WhatsApp, telefon ve online randevu sistemi (DoktorTakvimi) üzerinden paylaştığınız ad, telefon ve mesaj içeriği gibi kişisel verileri, yalnızca talebinizi yanıtlamak amacıyla işler.`,
   },
   {
     heading: "İşlenen Veriler ve Amaç",
-    body: "Form üzerinden ilettiğiniz bilgiler; randevu planlaması, size dönüş yapılması ve talebinizin değerlendirilmesi amacıyla kullanılır. Bu veriler pazarlama amacıyla üçüncü taraflarla paylaşılmaz.",
+    body: "İlettiğiniz bilgiler; randevu planlaması, size dönüş yapılması ve talebinizin değerlendirilmesi amacıyla kullanılır. Bu veriler pazarlama amacıyla üçüncü taraflarla paylaşılmaz.",
   },
   {
     heading: "Haklarınız",

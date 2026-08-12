@@ -4,7 +4,15 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { ArrowRight, Phone, CalendarCheck, UserRound, Sparkles, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  Phone,
+  CalendarCheck,
+  UserRound,
+  Sparkles,
+  MapPin,
+  MessageCircle,
+} from "lucide-react";
 import { clinicInfo } from "@/lib/content";
 
 const slides = [
@@ -107,9 +115,18 @@ export default function Hero() {
             Randevu Al
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
+          <a
+            href={clinicInfo.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 backdrop-blur-sm px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            <MessageCircle size={16} />
+            WhatsApp&apos;tan Randevu Al
+          </a>
           <Link
             href="/hizmetler"
-            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 backdrop-blur-sm px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full px-3 py-3.5 text-sm font-semibold text-white/80 transition-colors hover:text-white"
           >
             Tedavileri İncele
           </Link>

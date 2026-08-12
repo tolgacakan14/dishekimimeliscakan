@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, Clock, Navigation } from "lucide-react";
+import { ArrowRight, MapPin, Clock, Navigation, MessageCircle } from "lucide-react";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import ServicesBento from "@/components/ServicesBento";
@@ -137,15 +137,26 @@ export default function Home() {
                 </span>
               </li>
             </ul>
-            <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${clinicInfo.coords.lat},${clinicInfo.coords.lng}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
-            >
-              <Navigation size={16} aria-hidden />
-              Yol Tarifi Al
-            </a>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${clinicInfo.coords.lat},${clinicInfo.coords.lng}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
+              >
+                <Navigation size={16} aria-hidden />
+                Yol Tarifi Al
+              </a>
+              <a
+                href={clinicInfo.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
+              >
+                <MessageCircle size={16} aria-hidden />
+                WhatsApp&apos;tan Yaz
+              </a>
+            </div>
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-3">

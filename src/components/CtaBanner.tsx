@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { clinicInfo } from "@/lib/content";
 
 export default function CtaBanner() {
@@ -33,6 +33,15 @@ export default function CtaBanner() {
               Randevu Al
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
+            <a
+              href={clinicInfo.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              <MessageCircle size={16} />
+              WhatsApp&apos;tan Yaz
+            </a>
             <a
               href={clinicInfo.phoneHref}
               className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"

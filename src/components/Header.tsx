@@ -4,8 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, CalendarCheck } from "lucide-react";
+import { Menu, X, Phone, CalendarCheck, MessageCircle } from "lucide-react";
 import { navLinks, clinicInfo } from "@/lib/content";
+
+// S.S.S üst menüden kaldırıldı; Footer'daki "Sayfalar" listesinde yer almaya devam eder.
+const headerNavLinks = navLinks.filter((link) => link.href !== "/sss");
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -64,7 +67,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => {
+          {headerNavLinks.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
@@ -94,6 +97,15 @@ export default function Header() {
           >
             <Phone size={15} />
             {clinicInfo.phone}
+          </a>
+          <a
+            href={clinicInfo.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp'tan yazın"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent-tint text-accent-hover transition-transform hover:scale-105"
+          >
+            <MessageCircle size={17} />
           </a>
           <Link
             href="/iletisim#randevu"
@@ -126,7 +138,7 @@ export default function Header() {
             className="lg:hidden overflow-hidden bg-surface/95 backdrop-blur-md border-t border-border"
           >
             <nav className="container-x flex flex-col py-4 gap-1">
-              {navLinks.map((link) => (
+              {headerNavLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -140,14 +152,26 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href={clinicInfo.phoneHref}
-                onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-semibold text-white min-h-11"
-              >
-                <Phone size={15} />
-                {clinicInfo.phone}
-              </a>
+              <div className="mt-2 flex gap-2">
+                <a
+                  href={clinicInfo.phoneHref}
+                  onClick={() => setOpen(false)}
+                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-semibold text-white min-h-11"
+                >
+                  <Phone size={15} />
+                  Ara
+                </a>
+                <a
+                  href={clinicInfo.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-accent-tint px-4 py-3 text-sm font-semibold text-accent-hover min-h-11"
+                >
+                  <MessageCircle size={15} />
+                  WhatsApp
+                </a>
+              </div>
             </nav>
           </motion.div>
         )}

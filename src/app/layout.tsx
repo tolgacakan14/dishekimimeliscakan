@@ -6,7 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import CookieConsent from "@/components/CookieConsent";
 import { clinicSchema } from "@/lib/seo";
 
-const siteUrl = "https://dishekimimeliscakan.vercel.app";
+const siteUrl = "https://dishekimimeliscakan.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 const sections = [
   {
     heading: "Topladığımız Bilgiler",
-    body: "İletişim formunu doldurduğunuzda ad, telefon, e-posta ve mesaj içeriğiniz tarafımıza iletilir. Sitede gezinme sırasında başka kişisel veri toplanmaz.",
+    body: "WhatsApp üzerinden veya telefonla bizimle iletişime geçtiğinizde paylaştığınız ad, telefon ve mesaj içeriği tarafımıza iletilir. Sitede gezinme sırasında başka kişisel veri toplanmaz.",
   },
   {
     heading: "Üçüncü Taraf Hizmetler",
-    body: "Randevu formu Formspree, online randevu takvimi DoktorTakvimi (DocPlanner) ve konum gösterimi Google Maps altyapısı üzerinden çalışır. Bu hizmetler kendi gizlilik politikalarına tabidir.",
+    body: "Online randevu takvimi DoktorTakvimi (DocPlanner), konum gösterimi Google Maps ve WhatsApp altyapısı üzerinden çalışır. Bu hizmetler kendi gizlilik politikalarına tabidir.",
   },
   {
     heading: "İletişim",

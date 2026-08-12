@@ -1,6 +1,6 @@
 import { clinicInfo, services, faqs } from "@/lib/content";
 
-const siteUrl = "https://dishekimimeliscakan.vercel.app";
+const siteUrl = "https://dishekimimeliscakan.com";
 
 // LocalBusiness / Dentist structured data — only verified, real information.
 export const clinicSchema = {
