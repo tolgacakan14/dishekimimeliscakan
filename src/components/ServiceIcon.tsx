@@ -8,6 +8,7 @@ import {
   Sun,
   Gem,
   Crown,
+  Scan,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,6 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
   sun: Sun,
   gem: Gem,
   crown: Crown,
+  scan: Scan,
 };
 
 export default function ServiceIcon({

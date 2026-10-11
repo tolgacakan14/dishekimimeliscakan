@@ -10,8 +10,11 @@ const images = [
   { src: "/images/team/ekip-1.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
   { src: "/images/team/melis-cakan.jpg", alt: "Dr. Melis Çakan" },
   { src: "/images/team/melisa-turgut.jpg", alt: "Melisa Turgut, Diş Hekimi" },
-  { src: "/images/team/asistan-1.jpg", alt: "Klinik asistanımız" },
-  { src: "/images/team/asistan-2.jpg", alt: "Klinik asistanımız" },
+  { src: "/images/galeri/galeri-3.jpg", alt: "Klinik tedavi ünitesi" },
+  { src: "/images/galeri/galeri-4.jpg", alt: "Dijital diş ölçüm teknolojisi kullanımı" },
+  { src: "/images/galeri/tarayici-1.jpg", alt: "İntraoral tarayıcı ile dijital ölçü alımı" },
+  { src: "/images/galeri/tarayici-2.jpg", alt: "İntraoral tarayıcı ekranında 3 boyutlu diş görüntüsü" },
+  { src: "/images/galeri/tarayici-3.jpg", alt: "Tedavi ünitesinde dijital tarama teknolojisi" },
   { src: "/images/team/ekip-2.jpg", alt: "Melis Çakan Diş Kliniği ekibi" },
 ];
 

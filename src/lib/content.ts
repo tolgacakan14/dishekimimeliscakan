@@ -49,6 +49,16 @@ export const services: Service[] = [
     imageAlt: "Diş hekiminde muayene ve dolgu kontrolü",
   },
   {
+    slug: "dijital-agiz-taramasi",
+    title: "Dijital Ağız Taraması",
+    short: "Temassız intraoral tarayıcı ile konforlu, hızlı ve hassas dijital ölçü alıyoruz.",
+    description:
+      "Geleneksel ölçü maddeleri yerine kliniğimizde kullandığımız intraoral tarayıcı ile ağız içini birkaç dakika içinde dijital olarak tarıyoruz. Bu sayede boğulma hissi yaratan ölçü kaşıklarına ihtiyaç kalmadan, daha konforlu bir deneyimle yüksek hassasiyette 3 boyutlu ölçü elde ediyor; protez, kaplama ve diş teli planlamalarını bu dijital veriler üzerinden yürütüyoruz.",
+    icon: "scan",
+    image: "/images/galeri/tarayici-2.jpg",
+    imageAlt: "İntraoral tarayıcı ile alınan dijital diş ölçüsü",
+  },
+  {
     slug: "kozmetik-dis-hekimligi",
     title: "Kozmetik Diş Hekimliği",
     short: "Kişiye özel, doğal görünümlü ve estetik gülüşler tasarlıyoruz.",
